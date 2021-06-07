@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | Uni’s Engineering Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/06/_%EB%B0%98%EB%B3%B5%EB%AC%B8,-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%9E%9C%EB%8D%A4.html" />
+<meta property="og:url" content="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/06/_%EB%B0%98%EB%B3%B5%EB%AC%B8,-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%9E%9C%EB%8D%A4.html" />
+<meta property="og:site_name" content="Uni’s Engineering Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/06/_%EB%B0%98%EB%B3%B5%EB%AC%B8,-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%9E%9C%EB%8D%A4.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/06/_%EB%B0%98%EB%B3%B5%EB%AC%B8,-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%9E%9C%EB%8D%A4.html"},"headline":"Title","dateModified":"2021-06-06T00:00:00-05:00","datePublished":"2021-06-06T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BabyEngineer-Unilog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://engineer-uni.github.io/BabyEngineer-Unilog/feed.xml" title="Uni's Engineering Blog" /><link rel="shortcut icon" type="image/x-icon" href="/BabyEngineer-Unilog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BabyEngineer-Unilog/">Uni&#39;s Engineering Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BabyEngineer-Unilog/about/">About Me</a><a class="page-link" href="/BabyEngineer-Unilog/search/">Search</a><a class="page-link" href="/BabyEngineer-Unilog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-06T00:00:00-05:00" itemprop="datePublished">
+        Jun 6, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Engineer-Uni/BabyEngineer-Unilog/tree/master/_notebooks/2021-05-26_반복문, 리스트와 랜덤.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Engineer-Uni/BabyEngineer-Unilog/master?filepath=_notebooks%2F2021-05-26_%EB%B0%98%EB%B3%B5%EB%AC%B8%2C+%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80+%EB%9E%9C%EB%8D%A4.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Engineer-Uni/BabyEngineer-Unilog/blob/master/_notebooks/2021-05-26_반복문, 리스트와 랜덤.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-05-26_반복문, 리스트와 랜덤.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/Engineer-Uni/Engineer-Unilog/blob/master/_notebooks/2021-05-26_%EB%B0%98%EB%B3%B5%EB%AC%B8%2C%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80%20%EB%9E%9C%EB%8D%A4.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;"><strong>&#47532;&#49828;&#53944;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;"> </a></h1><blockquote><p>리스트 안에는 어떠한 자료형도 포함시킬 수 있다.<br />
+숫자, 문자열 뿐 아니라 변수, 다른 리스트도 저장할 수 있다.<br />
+하나의 리스트 안에 다양한 자료형을 혼합하여 포함시킬 수 있다.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">n1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="n">n1</span><span class="p">,</span> <span class="n">fruits</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;슈퍼맨&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span> <span class="c1">#n1 은 변수값</span>
+<span class="n">mylist</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mylist</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;list&#39;&gt;
+&lt;class &#39;int&#39;&gt;
+&lt;class &#39;int&#39;&gt;
+&lt;class &#39;str&#39;&gt;
+&lt;class &#39;bool&#39;&gt;
+&lt;class &#39;list&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">list_1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2, 3, 4, 5]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">list_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">list_2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 2, 3, 4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;-&#52636;&#47141;&#54616;&#44592;"><strong>&#47532;&#49828;&#53944; &#52636;&#47141;&#54616;&#44592;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;-&#52636;&#47141;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
+<span class="c1">#리스트 출력 시 디폴트값이 Enter이기 때문에 줄을 바꿔서 출력된다.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>사과
+오렌지
+포도
+수박
+바나나
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; : &#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;str&#39;&gt; : 사과
+&lt;class &#39;str&#39;&gt; : 오렌지
+&lt;class &#39;str&#39;&gt; : 포도
+&lt;class &#39;str&#39;&gt; : 수박
+&lt;class &#39;str&#39;&gt; : 바나나
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51064;&#45937;&#49905;:-&#47532;&#49828;&#53944;-&#50836;&#49548;-&#52628;&#52636;"><strong>&#51064;&#45937;&#49905;: &#47532;&#49828;&#53944; &#50836;&#49548; &#52628;&#52636;</strong><a class="anchor-link" href="#&#51064;&#45937;&#49905;:-&#47532;&#49828;&#53944;-&#50836;&#49548;-&#52628;&#52636;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,[</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]]</span>
+<span class="n">fruits</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;수박&#39;, &#39;바나나&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">],</span><span class="s1">&#39;포도&#39;</span><span class="p">,[</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]]</span>
+<span class="n">fruits</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;포도&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>7</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51064;&#45937;&#49828;-&#50504;&#51032;-&#51064;&#45937;&#49828;-&#52628;&#52636;"><strong>&#51064;&#45937;&#49828; &#50504;&#51032; &#51064;&#45937;&#49828; &#52628;&#52636;</strong><a class="anchor-link" href="#&#51064;&#45937;&#49828;-&#50504;&#51032;-&#51064;&#45937;&#49828;-&#52628;&#52636;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,[</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]]</span>
+<span class="n">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;포도&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,[</span><span class="s1">&#39;life&#39;</span><span class="p">,</span><span class="s1">&#39;is&#39;</span><span class="p">]]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;life&#39;, &#39;is&#39;]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;life&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#49836;&#46972;&#51060;&#49905;:-&#47532;&#49828;&#53944;-&#50836;&#49548;-&#52628;&#52636;"><strong>&#49836;&#46972;&#51060;&#49905;: &#47532;&#49828;&#53944; &#50836;&#49548; &#52628;&#52636;</strong><a class="anchor-link" href="#&#49836;&#46972;&#51060;&#49905;:-&#47532;&#49828;&#53944;-&#50836;&#49548;-&#52628;&#52636;"> </a></h1><blockquote><p>슬라이싱 기법으로 한 번에 여러 개의 요소들을 추출할 수 있다 <br />
+리스트명[시작인덱스 :끝인덱스(이전값까지만 계산) : 간격]</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, 4, 5, 6, 7]
+[3, 4, 5, 6, 7]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="c1">#시작 인덱스 생략</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="c1">#끝 인덱스 생략</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+--------------------------------------------------
+[1, 2, 3]
+[1, 2, 3]
+--------------------------------------------------
+[4, 5, 6, 7, 8, 9, 10]
+[4, 5, 6, 7, 8, 9, 10]
+[4, 5, 6, 7, 8, 9, 10]
+--------------------------------------------------
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#44036;&#44201;-&#49836;&#46972;&#51060;&#49905;-_-&#51677;&#49688;&#47564;,-&#54848;&#49688;&#47564;-..."><strong>&#44036;&#44201; &#49836;&#46972;&#51060;&#49905; _ &#51677;&#49688;&#47564;, &#54848;&#49688;&#47564; ...</strong><a class="anchor-link" href="#&#44036;&#44201;-&#49836;&#46972;&#51060;&#49905;-_-&#51677;&#49688;&#47564;,-&#54848;&#49688;&#47564;-..."> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">nums</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[4, 6, 8]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#리스트명 [끝인덱스 : 시작인덱스 : 간격(음수)]</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[9, 7, 5]
+[9, 7, 5]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">8</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[8, 6, 4]
+[8, 6, 4]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,],</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], 4]
+[2, 3]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;-&#50672;&#49328;&#54616;&#44592;"><strong>&#47532;&#49828;&#53944; &#50672;&#49328;&#54616;&#44592;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;-&#50672;&#49328;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mi">3</span>
+<span class="n">b</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;A&#39;, &#39;a&#39;, &#39;A&#39;, &#39;a&#39;, &#39;A&#39;, &#39;a&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="len(&#47532;&#49828;&#53944;&#47749;)_&#47532;&#49828;&#53944;&#51032;-&#54637;&#47785;&#49688;-&#44396;&#54616;&#44592;"><strong>len(&#47532;&#49828;&#53944;&#47749;)_&#47532;&#49828;&#53944;&#51032; &#54637;&#47785;&#49688; &#44396;&#54616;&#44592;</strong><a class="anchor-link" href="#len(&#47532;&#49828;&#53944;&#47749;)_&#47532;&#49828;&#53944;&#51032;-&#54637;&#47785;&#49688;-&#44396;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;-&#50836;&#49548;&#44050;-&#48320;&#44221;&#54616;&#44592;"><strong>&#47532;&#49828;&#53944; &#50836;&#49548;&#44050; &#48320;&#44221;&#54616;&#44592;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;-&#50836;&#49548;&#44050;-&#48320;&#44221;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span><span class="s1">&#39;망고&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;망고&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">fruits</span><span class="p">[</span><span class="n">k</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span><span class="s1">&#39;망고&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;망고&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># 슬라이싱[추가 시작할 인덱스, 보여질 인덱스] 해서 넣어야된다~</span>
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;망고&#39;</span><span class="p">,</span><span class="s1">&#39;복숭아&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;망고&#39;, &#39;복숭아&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;망고&#39;</span><span class="p">,</span><span class="s1">&#39;복숭아&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, [&#39;망고&#39;, &#39;복숭아&#39;], &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;-&#50836;&#49548;-&#49325;&#51228;&#54616;&#45716;-3&#44032;&#51648;-&#48169;&#48277;"><strong>&#47532;&#49828;&#53944; &#50836;&#49548; &#49325;&#51228;&#54616;&#45716; 3&#44032;&#51648; &#48169;&#48277;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;-&#50836;&#49548;-&#49325;&#51228;&#54616;&#45716;-3&#44032;&#51648;-&#48169;&#48277;"> </a></h1><p><strong>인덱스를 알고 있을 때 사용</strong></p>
+<ul>
+<li>del 리스트명[index] : 바로 제거</li>
+<li>리스트명.pop() 인덱스를 알고 있을 때 사용 : 값 반환 후 제거 (변수 = 제거할인덱스 지정해보면 제거된 값을 알려준다)</li>
+</ul>
+<p><strong>값을 알고 있을 때 사용</strong></p>
+<ul>
+<li>리스트명.remove(요소) </li>
+</ul>
+<p>예제) '바나나'를 없애는 3가지 방법</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">fruits</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,[</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]]</span>
+<span class="n">pop_fruit</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;pop_fruit는 </span><span class="si">{</span><span class="n">pop_fruit</span><span class="si">}</span><span class="s1"> 입니다&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, [&#39;수박&#39;, &#39;바나나&#39;]] pop_fruit는 포도 입니다
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#리스트명.clear()</span>
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,[</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]]</span>
+
+<span class="n">fruits</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># 요소가 여러개여도 가장 첫번째 항목만 삭제한다</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">,</span><span class="s1">&#39;파인애플&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;바나나&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;파인애플&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">,</span><span class="s1">&#39;망고&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="s1">&#39;망고&#39;</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="n">fruits</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;망고&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;&#50640;-&#50836;&#49548;-&#52628;&#44032;"><strong>&#47532;&#49828;&#53944;&#50640; &#50836;&#49548; &#52628;&#44032;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;&#50640;-&#50836;&#49548;-&#52628;&#44032;"> </a></h1><ul>
+<li>.append() _ 리스트에 맨 마지막에 하나의 요소를 추가한다</li>
+<li>.extend() _ 리스트에 맨 마지막에 여러개의 요소를 추가한다</li>
+<li>.insert(인덱스, 요소) _ 지정된 인덱스에 요소를 추가한다</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;복숭아&#39;</span><span class="p">)</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;복숭아&#39;</span><span class="p">,</span><span class="s1">&#39;망고&#39;</span><span class="p">])</span>
+<span class="c1">#fruits.append(&#39;복숭아&#39;,&#39;망고&#39;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;, &#39;복숭아&#39;, [&#39;복숭아&#39;, &#39;망고&#39;]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;복숭아&#39;</span><span class="p">,</span><span class="s1">&#39;망고&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># 리스트에 리스트 추가 ( 이중괄호로 묶기 )</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">extend</span><span class="p">([[</span><span class="s1">&#39;복숭아&#39;</span><span class="p">,</span><span class="s1">&#39;망고&#39;</span><span class="p">],[</span><span class="s1">&#39;키위&#39;</span><span class="p">,</span> <span class="s1">&#39;파인애플&#39;</span><span class="p">]])</span>
+<span class="c1"># fruits.extend([&#39;복숭아&#39;,&#39;망고&#39;],[&#39;키위&#39;, &#39;파인애플&#39;])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;, &#39;복숭아&#39;, &#39;망고&#39;]
+----------------------------------------------------------------------------------------------------
+[&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;, [&#39;복숭아&#39;, &#39;망고&#39;], [&#39;키위&#39;, &#39;파인애플&#39;]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;복숭아&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;복숭아&#39;, &#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50836;&#49548;&#51032;-&#50948;&#52824;-&#52286;&#44592;"><strong>&#50836;&#49548;&#51032; &#50948;&#52824; &#52286;&#44592;</strong><a class="anchor-link" href="#&#50836;&#49548;&#51032;-&#50948;&#52824;-&#52286;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;포도&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># 요소가 없다는 메세지를 출력하려면 다음과 같이 코드를 짠다.</span>
+
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="s1">&#39;자두&#39;</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;자두&#39;</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;해당 과일은 준비되지 않았습니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>해당 과일은 준비되지 않았습니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47716;&#48260;-&#50672;&#49328;&#51088;-in,-not-in"><strong>&#47716;&#48260; &#50672;&#49328;&#51088; in, not in</strong><a class="anchor-link" href="#&#47716;&#48260;-&#50672;&#49328;&#51088;-in,-not-in"> </a></h1><p>여러 데이터 중 원하는 데이터가 존재하는지 여부를 검사하는 연산자</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;p&#39;</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">0</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="s1">&#39;f&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#46020;&#49436;-&#50676;&#46988;&#54616;&#44592;"><strong>&#50696;&#51228;) &#46020;&#49436; &#50676;&#46988;&#54616;&#44592;</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#46020;&#49436;-&#50676;&#46988;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;해리포터&#39;</span><span class="p">,</span><span class="s1">&#39;나니아연대기&#39;</span><span class="p">,</span><span class="s1">&#39;빠삐용&#39;</span><span class="p">,</span><span class="s1">&#39;사피엔스&#39;</span><span class="p">]</span>
+<span class="n">book_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;도서 제목: &#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">book_name</span> <span class="ow">in</span> <span class="n">books</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">book_name</span><span class="si">}</span><span class="s1">는 </span><span class="si">{</span><span class="n">books</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">book_name</span><span class="p">)</span><span class="si">}</span><span class="s1">번째 인덱스에서 찾을 수 있습니다.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">book_name</span><span class="si">}</span><span class="s1"> 도서는 준비되지 않았습니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>도서 제목: 해리포터
+해리포터는 0번째 인덱스에서 찾을 수 있습니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#53945;&#51221;-&#50836;&#49548;&#51032;-&#44060;&#49688;-&#52628;&#52636;"><strong>&#53945;&#51221; &#50836;&#49548;&#51032; &#44060;&#49688; &#52628;&#52636;</strong><a class="anchor-link" href="#&#53945;&#51221;-&#50836;&#49548;&#51032;-&#44060;&#49688;-&#52628;&#52636;"> </a></h1><p>.count(요소) _ 리스트에서 지정한 요소의 개수를 반환한다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;수박&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;-&#51221;&#47148;"><strong>&#47532;&#49828;&#53944; &#51221;&#47148;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;-&#51221;&#47148;"> </a></h1><p>리스트 원본 정렬하기</p>
+<ul>
+<li>리스트명.sort() _ 오름차순</li>
+<li>리스트명.sort(reverse=True) _ 내림차순</li>
+</ul>
+<p>리스트 원본은 유지한 채로 사본 정렬하기</p>
+<ul>
+<li>sorted(리스트명)_ 오름차순</li>
+<li>sorted(리스트명, reverse=True) _ 내림차순</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;포도&#39;, &#39;오렌지&#39;, &#39;수박&#39;, &#39;사과&#39;, &#39;바나나&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">sorted_fruits</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;원본: </span><span class="si">{</span><span class="n">fruits</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;오름차순: </span><span class="si">{</span><span class="n">sorted_fruits</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>원본: [&#39;사과&#39;, &#39;오렌지&#39;, &#39;포도&#39;, &#39;수박&#39;, &#39;바나나&#39;]
+오름차순: [&#39;바나나&#39;, &#39;사과&#39;, &#39;수박&#39;, &#39;오렌지&#39;, &#39;포도&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id=".reverse(-)-_-&#47532;&#49828;&#53944;-&#50669;&#49692;&#51004;&#47196;-&#46244;&#51665;&#44592;"><strong>.reverse( ) _ &#47532;&#49828;&#53944; &#50669;&#49692;&#51004;&#47196; &#46244;&#51665;&#44592;</strong><a class="anchor-link" href="#.reverse(-)-_-&#47532;&#49828;&#53944;-&#50669;&#49692;&#51004;&#47196;-&#46244;&#51665;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;사과&#39;</span><span class="p">,</span><span class="s1">&#39;오렌지&#39;</span><span class="p">,</span><span class="s1">&#39;포도&#39;</span><span class="p">,</span><span class="s1">&#39;수박&#39;</span><span class="p">,</span><span class="s1">&#39;바나나&#39;</span><span class="p">]</span>
+<span class="n">fruits</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;바나나&#39;, &#39;수박&#39;, &#39;포도&#39;, &#39;오렌지&#39;, &#39;사과&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;&#50640;&#49436;-&#47004;&#45924;-&#54637;&#47785;-&#52636;&#47141;&#54616;&#44592;"><strong>&#47532;&#49828;&#53944;&#50640;&#49436; &#47004;&#45924; &#54637;&#47785; &#52636;&#47141;&#54616;&#44592;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;&#50640;&#49436;-&#47004;&#45924;-&#54637;&#47785;-&#52636;&#47141;&#54616;&#44592;"> </a></h1><p>랜덤을 사용하기 위해서는 반드시 <strong>import random</strong> 해줘야한다</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">wise_saying</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;미래는 현재 우리가 무엇을 하고 있는가에 달려있다. - 마히트마 간디&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;교육은 세상을 바꿀 수 있는 가장 강력힌 무기다 - 넬슨 만델리&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;성공하기 위한 가장 확실한 방법은 한번 더 시도해 보는 것이다 - 토마스에디슨&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;가장 불만에 가득찬 고객은 가장 위대한 배움의 원천이다 _ 빌 게이츠&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;영원히 살 것처럼 꿈꾸고 오믈 죽을 것처럼 살아라 - 제임스딘&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;경쟁우위가 없다면 경쟁하지 마라 - 잭윌치&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;삶에 실수는 없고, 배움만이 있을 뿐이다. - 지아드 압델 누어&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;어제와 똑같은 삶을 살면서 다른 미래를 기대하는 것은 정신병의 초기증세이다 -아인슈타인&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;문제점을 찾지 말고 해결책을 찾으라 - 헨리포드&#39;</span><span class="p">)</span>
+<span class="n">wise_saying</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;실수를 해보지 않은 사람은 한번도 새로운 일을 시도해보지 않았던 사람이다 -아인슈타인&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">wise_saying</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">wise_saying</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>미래는 현재 우리가 무엇을 하고 있는가에 달려있다. - 마히트마 간디
+[&#39;미래는 현재 우리가 무엇을 하고 있는가에 달려있다. - 마히트마 간디&#39;, &#39;문제점을 찾지 말고 해결책을 찾으라 - 헨리포드&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47532;&#49828;&#53944;-&#54637;&#47785;-&#44228;&#49328;&#54616;&#44592;"><strong>&#47532;&#49828;&#53944; &#54637;&#47785; &#44228;&#49328;&#54616;&#44592;</strong><a class="anchor-link" href="#&#47532;&#49828;&#53944;-&#54637;&#47785;-&#44228;&#49328;&#54616;&#44592;"> </a></h1><ul>
+<li>합계: sum(리스트명)</li>
+</ul>
+<ul>
+<li>최대값: max(리스트명)</li>
+</ul>
+<ul>
+<li>최소값: min(리스트명)</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;월&#39;</span><span class="p">,</span><span class="s1">&#39;화&#39;</span><span class="p">,</span><span class="s1">&#39;수&#39;</span><span class="p">,</span><span class="s1">&#39;목&#39;</span><span class="p">,</span><span class="s1">&#39;금&#39;</span><span class="p">,</span><span class="s1">&#39;토&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="nb">max</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>15 e 금
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Random-&#47784;&#46280;"><strong>Random &#47784;&#46280;</strong><a class="anchor-link" href="#Random-&#47784;&#46280;"> </a></h1><ul>
+<li><p>숫자 사용하는 경우<br />
+random.randint(시작값,끝값) : 시작값, 끝값 사이의 랜덤한 정수 반환(*끝값 포함)<br />
+random.randrange(시작값,끝값) : 시작값, 끝값 사이의 랜덤한 정수 반환(끝값 불포함/range 랑 동일한 방식으로 사용)<br />
+random.randrange(끝값) : 인자가 1개인 경우 0~끝값 사이의 랜덤한 정수 반환(끝값 불포함)</p>
+</li>
+<li><p>로또번호<br />
+random.sample(range(처음값, 끝값), 갯수) : 임의의 값(난수)을 필요한 개수만큼 리스트(list)로 반환 / 중복 안시킴</p>
+</li>
+<li><p>체온 체크 게이트<br />
+random.uniform(최소, 최대) : 입력 파라미터인 최소부터 최대까지 중 임의의 부동소수점(float) 숫자를 리턴한다</p>
+</li>
+<li><p>점심메뉴 고르기<br />
+random.choice(리스트명) : 리스트의 항목들 중 랜덤으로 하나 출력</p>
+</li>
+<li><p>노래 랜덤재생<br />
+random.shuffle(리스트명) :  순서형 자료를 뒤죽박죽으로 섞음</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;1-&#49707;&#51088;&#46308;&#51032;-&#54633;&#44228;&#50752;-&#54217;&#44512;-&#44396;&#54616;&#44592;"><strong>&#50696;&#51228;1 &#49707;&#51088;&#46308;&#51032; &#54633;&#44228;&#50752; &#54217;&#44512; &#44396;&#54616;&#44592;</strong><a class="anchor-link" href="#&#50696;&#51228;1-&#49707;&#51088;&#46308;&#51032;-&#54633;&#44228;&#50752;-&#54217;&#44512;-&#44396;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;숫자를 입력하세요: &#39;</span><span class="p">))</span> 
+    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">average</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;합계는 </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span><span class="si">}</span><span class="s1">이고, 평균은 </span><span class="si">{</span><span class="n">average</span><span class="si">}</span><span class="s1">입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>숫자를 입력하세요: 0
+숫자를 입력하세요: 0
+숫자를 입력하세요: 0
+숫자를 입력하세요: 0
+숫자를 입력하세요: 1
+합계는 1.0이고, 평균은 0.2입니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;숫자를 입력하시오 : &quot;</span><span class="p">))</span>
+    <span class="n">num</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;숫자들의 합계 : &quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="s2">&quot;숫자들의 평균&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>숫자를 입력하시오 : 1
+[1]
+숫자를 입력하시오 : 2
+[1, 2]
+숫자를 입력하시오 : 3
+[1, 2, 3]
+숫자를 입력하시오 : 4
+[1, 2, 3, 4]
+숫자를 입력하시오 : 5
+[1, 2, 3, 4, 5]
+숫자들의 합계 :  15 숫자들의 평균 3.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/BabyEngineer-Unilog/2021/06/06/_%EB%B0%98%EB%B3%B5%EB%AC%B8,-%EB%A6%AC%EC%8A%A4%ED%8A%B8%EC%99%80-%EB%9E%9C%EB%8D%A4.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BabyEngineer-Unilog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BabyEngineer-Unilog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
