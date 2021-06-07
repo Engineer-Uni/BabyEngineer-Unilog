@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | Uni’s Engineering Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/05/25/%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.html" />
+<meta property="og:url" content="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/05/25/%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.html" />
+<meta property="og:site_name" content="Uni’s Engineering Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-25T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/05/25/%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/05/25/%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.html"},"headline":"Title","dateModified":"2021-05-25T00:00:00-05:00","datePublished":"2021-05-25T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BabyEngineer-Unilog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://engineer-uni.github.io/BabyEngineer-Unilog/feed.xml" title="Uni's Engineering Blog" /><link rel="shortcut icon" type="image/x-icon" href="/BabyEngineer-Unilog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BabyEngineer-Unilog/">Uni&#39;s Engineering Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BabyEngineer-Unilog/about/">About Me</a><a class="page-link" href="/BabyEngineer-Unilog/search/">Search</a><a class="page-link" href="/BabyEngineer-Unilog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-25T00:00:00-05:00" itemprop="datePublished">
+        May 25, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Engineer-Uni/BabyEngineer-Unilog/tree/master/_notebooks/2021-05-25-기본문법과연산.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Engineer-Uni/BabyEngineer-Unilog/master?filepath=_notebooks%2F2021-05-25-%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Engineer-Uni/BabyEngineer-Unilog/blob/master/_notebooks/2021-05-25-기본문법과연산.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-05-25-기본문법과연산.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/Engineer-Uni/Engineer-Unilog/blob/master/_notebooks/2021-05-25-%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51648;&#45212;&#51452;-&#48373;&#49845;:-&#45936;&#51060;&#53552;-&#53440;&#51077;"><strong>&#51648;&#45212;&#51452; &#48373;&#49845;: &#45936;&#51060;&#53552; &#53440;&#51077;</strong><a class="anchor-link" href="#&#51648;&#45212;&#51452;-&#48373;&#49845;:-&#45936;&#51060;&#53552;-&#53440;&#51077;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+
+
+<span class="c1"># 따옴표 안의 숫자는 문자로 인식한다</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;20&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
+
+
+<span class="c1"># 숫자와 문자는 계산되지 않는다</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">abcd</span><span class="p">,</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+&lt;class &#39;int&#39;&gt;
+94905490205184
+30
+1020
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-29-376c73c22bfa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     12</span> a<span class="ansi-blue-fg">,</span> b <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#39;10&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;20&#39;</span>
+<span class="ansi-green-intense-fg ansi-bold">     13</span> print<span class="ansi-blue-fg">(</span>c<span class="ansi-blue-fg">+</span>d<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 14</span><span class="ansi-red-fg"> </span>a<span class="ansi-blue-fg">,</span> b <span class="ansi-blue-fg">=</span> abcd<span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">20</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span> print<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">+</span>b<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;abcd&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1.0
+&lt;class &#39;float&#39;&gt;
+139669584096688
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="s2">&quot;hi&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+
+
+<span class="c1"># 문자열 여러줄 넣고 싶다면 따옴표 3개를 연달아 작성한다</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;자세히 보아야 예쁘다.</span>
+<span class="s1">오래 보아야 사랑스럽다.</span>
+<span class="s1">너도 그렇다.&#39;&#39;&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hi
+&lt;class &#39;str&#39;&gt;
+139670275605488
+자세히 보아야 예쁘다.
+오래 보아야 사랑스럽다.
+너도 그렇다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+&lt;class &#39;bool&#39;&gt;
+94905489531136
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3]
+&lt;class &#39;list&#39;&gt;
+139669583916880
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, 2, 3)
+&lt;class &#39;tuple&#39;&gt;
+139669584078560
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span> <span class="p">:</span> <span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span> <span class="p">:</span> <span class="mi">15</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;name&#39;: &#39;john&#39;, &#39;age&#39;: 15}
+&lt;class &#39;dict&#39;&gt;
+139669651052016
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">test1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>   <span class="c1"># 데이터 형</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">test1</span><span class="p">))</span>     <span class="c1"># 데이터 주소</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1, 2, 3, 4}
+&lt;class &#39;set&#39;&gt;
+139669712745728
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="-&#54805;-&#48320;&#54872;-&#54632;&#49688;"><strong> &#54805; &#48320;&#54872; &#54632;&#49688;</strong><a class="anchor-link" href="#-&#54805;-&#48320;&#54872;-&#54632;&#49688;"> </a></h1><blockquote><p>int(), float(), str()</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;20&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1020
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">float</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span> <span class="mf">10.3</span><span class="p">,</span> <span class="mf">20.8</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#48320;&#49688;&#50640;-&#44050;-&#51077;&#47141;&#48155;&#44592;-&gt;-input()"><strong>&#48320;&#49688;&#50640; &#44050; &#51077;&#47141;&#48155;&#44592; &gt; input()</strong><a class="anchor-link" href="#&#48320;&#49688;&#50640;-&#44050;-&#51077;&#47141;&#48155;&#44592;-&gt;-input()"> </a></h1><p>input으로 입력받은 값은 문자값으로 출력된다</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;이름을 입력하세요&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;님 안녕하세요?&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>이름을 입력하세요허윤희
+허윤희 님 안녕하세요?
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#52636;&#47141;-&gt;-print()"><strong>&#52636;&#47141; &gt; print()</strong><a class="anchor-link" href="#&#52636;&#47141;-&gt;-print()"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+0.5
+Hi
+10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="s1">&#39;World&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1 더하기 2는&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;나는&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="s1">&#39;살 입니다&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello World
+1 더하기 2는 3
+나는 10 살 입니다
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#52636;&#47141;-&gt;-f&#49828;&#53944;&#47553;"><strong>&#52636;&#47141; &gt; f&#49828;&#53944;&#47553;</strong><a class="anchor-link" href="#&#52636;&#47141;-&gt;-f&#49828;&#53944;&#47553;"> </a></h1><p>문장 사이에 변수값을 출력할 때 편리하다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;이름을 입력하세요&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">님 안녕하세요?&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>이름을 입력하세요허윤희
+허윤희님 안녕하세요?
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#49328;&#49696;&#50672;&#49328;"><strong>&#49328;&#49696;&#50672;&#49328;</strong><a class="anchor-link" href="#&#49328;&#49696;&#50672;&#49328;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">//</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>33
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1000000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#46160;-&#49688;&#47484;-&#51077;&#47141;&#48155;&#50500;-&#45908;&#54616;&#45716;-&#54532;&#47196;&#44536;&#47016;"><strong>&#46160; &#49688;&#47484; &#51077;&#47141;&#48155;&#50500; &#45908;&#54616;&#45716; &#54532;&#47196;&#44536;&#47016;</strong><a class="anchor-link" href="#&#46160;-&#49688;&#47484;-&#51077;&#47141;&#48155;&#50500;-&#45908;&#54616;&#45716;-&#54532;&#47196;&#44536;&#47016;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;두 수를 입력받아 더하는 프로그램입니다.&#39;</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;첫번째 숫자를 입력하세요: &#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;두번째 숫자를 입력하세요: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1"> + </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>두 수를 입력받아 더하는 프로그램입니다.
+첫번째 숫자를 입력하세요: 10
+두번째 숫자를 입력하세요: 20
+10 + 20 = 30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#49328;&#49696;&#50672;&#49328;&#51032;-&#50864;&#49440;&#49692;&#50948;"><strong>&#49328;&#49696;&#50672;&#49328;&#51032; &#50864;&#49440;&#49692;&#50948;</strong><a class="anchor-link" href="#&#49328;&#49696;&#50672;&#49328;&#51032;-&#50864;&#49440;&#49692;&#50948;"> </a></h1><p>() &gt; *<em> &gt; </em>, / &gt; +, -</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#54868;&#50472;&#50728;&#46020;-&gt;-&#49453;&#50472;&#50728;&#46020;&#47196;-&#48320;&#54872;&#54616;&#44592;"><strong>&#54868;&#50472;&#50728;&#46020; &gt; &#49453;&#50472;&#50728;&#46020;&#47196; &#48320;&#54872;&#54616;&#44592;</strong><a class="anchor-link" href="#&#54868;&#50472;&#50728;&#46020;-&gt;-&#49453;&#50472;&#50728;&#46020;&#47196;-&#48320;&#54872;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;화씨온도: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;섭씨온도:&#39;</span><span class="p">,(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>화씨온도: 100
+섭씨온도: 37.77777777777778
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#49340;&#44033;&#54805;-&#45331;&#51060;"><strong>&#49340;&#44033;&#54805; &#45331;&#51060;</strong><a class="anchor-link" href="#&#49340;&#44033;&#54805;-&#45331;&#51060;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;밑변:&#39;</span><span class="p">))</span>
+<span class="n">h</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;높이:&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;삼각형의 넓이:&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">*</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>밑변:3.2
+높이:5.5
+삼각형의 넓이: 8.8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50896;&#51032;-&#45331;&#51060;-&#44396;&#54616;&#44592;"><strong>&#50896;&#51032; &#45331;&#51060; &#44396;&#54616;&#44592;</strong><a class="anchor-link" href="#&#50896;&#51032;-&#45331;&#51060;-&#44396;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;반지름: &#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;원의 둘레:&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="mf">3.14</span> <span class="p">,</span> <span class="s1">&#39;원의 넓이:&#39;</span><span class="p">,</span> <span class="mf">3.14</span><span class="o">*</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>반지름: 3
+원의 둘레: 18.84 원의 넓이: 28.26
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#54624;&#45817;-&#50672;&#49328;&#51088;"><strong>&#54624;&#45817; &#50672;&#49328;&#51088;</strong><a class="anchor-link" href="#&#54624;&#45817;-&#50672;&#49328;&#51088;"> </a></h1><li>주소에 변수값 할당하기</li>
+<li>기호 '=' 사용</li>
+<li>'=='는 [같다]라는 연산 표현</li>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># 여러개의 변수에 하나의 값 할당</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># 여러개의 변수에 각각 다른 값 할당</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+1 1 1
+1 2 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#48373;&#54633;&#54624;&#45817;-&#50672;&#49328;&#51088;"><strong>&#48373;&#54633;&#54624;&#45817; &#50672;&#49328;&#51088;</strong><a class="anchor-link" href="#&#48373;&#54633;&#54624;&#45817;-&#50672;&#49328;&#51088;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">20</span>
+<span class="c1"># x = x(기존) + 20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>30
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="c1"># x = x * (x + y)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>24
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47928;&#51088;&#50676;-&#50672;&#44208;&#54616;&#44592;"><strong>&#47928;&#51088;&#50676; &#50672;&#44208;&#54616;&#44592;</strong><a class="anchor-link" href="#&#47928;&#51088;&#50676;-&#50672;&#44208;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;이름을 입력하세요: &#39;</span><span class="p">)</span>
+<span class="n">greet</span> <span class="o">=</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;님, 안녕하세요&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>이름을 입력하세요: 윤희
+윤희님, 안녕하세요
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">English</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s1">&#39;영어점수: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">English</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;점&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>영어점수: 80점
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47196;&#48391;-&#44592;&#51088;-&#47564;&#46308;&#44592;"><strong>&#47196;&#48391; &#44592;&#51088; &#47564;&#46308;&#44592;</strong><a class="anchor-link" href="#&#47196;&#48391;-&#44592;&#51088;-&#47564;&#46308;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">stadium</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;경기장소: &#39;</span><span class="p">)</span>
+<span class="n">winner</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;이긴 팀: &#39;</span><span class="p">)</span>
+<span class="n">loser</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;진 팀: &#39;</span><span class="p">)</span>
+<span class="n">vip</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;vip 선수: &#39;</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;점수: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&#39;&#39;오늘 </span><span class="si">{</span><span class="n">stadium</span><span class="si">}</span><span class="s1">에서 경기가 열렸습니다.</span>
+<span class="si">{</span><span class="n">winner</span><span class="si">}</span><span class="s1">와(과) </span><span class="si">{</span><span class="n">loser</span><span class="si">}</span><span class="s1">은(는) 치열한 공방전을 펼쳤습니다.</span>
+<span class="si">{</span><span class="n">vip</span><span class="si">}</span><span class="s1">이(가) 맹활약을 펼습니다.</span>
+<span class="s1">결국 </span><span class="si">{</span><span class="n">winner</span><span class="si">}</span><span class="s1">이(가) </span><span class="si">{</span><span class="n">loser</span><span class="si">}</span><span class="s1">을(를) </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s1">로 이겼습니다.&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>경기장소: 올림픽 경기장
+이긴 팀: 대한민국
+진 팀: 일본
+vip 선수: 손흥민
+점수: 3:0
+--------------------------------------------------
+오늘 올림픽 경기장에서 경기가 열렸습니다.
+대한민국와(과) 일본은(는) 치열한 공방전을 펼쳤습니다.
+손흥민이(가) 맹활약을 펼습니다.
+결국 대한민국이(가) 일본을(를) 3:0로 이겼습니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#44305;&#44256;-&#47564;&#46308;&#44592;"><strong>&#44305;&#44256; &#47564;&#46308;&#44592;</strong><a class="anchor-link" href="#&#44305;&#44256;-&#47564;&#46308;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;어느 지역인가요?&#39;</span><span class="p">)</span>
+<span class="n">loc_type</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;매물의 종류는 무엇인가요?&#39;</span><span class="p">)</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;면적은 어떻게 되나요?(평수)&#39;</span><span class="p">)</span>
+<span class="n">room_nm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;방의 개수는 몇개인가요?&#39;</span><span class="p">)</span>
+<span class="n">price</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;가격은 얼마인가요?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&#39;&#39;</span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s1">에 위치한 아주 좋은 </span><span class="si">{</span><span class="n">loc_type</span><span class="si">}</span><span class="s1">이(가) 매물로 나왔습니다.</span>
+<span class="s1">이 </span><span class="si">{</span><span class="n">loc_type</span><span class="si">}</span><span class="s1">는 </span><span class="si">{</span><span class="n">dimensions</span><span class="si">}</span><span class="s1">평으로 </span><span class="si">{</span><span class="n">room_nm</span><span class="si">}</span><span class="s1">개의 방을 가지고 있습니다.</span>
+<span class="s1">가격은 </span><span class="si">{</span><span class="n">price</span><span class="si">}</span><span class="s1">만원 입니다.&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>어느 지역인가요?서울
+매물의 종류는 무엇인가요?아파트
+면적은 어떻게 되나요?(평수)20
+방의 개수는 몇개인가요?2
+가격은 얼마인가요?17억
+--------------------------------------------------
+서울에 위치한 아주 좋은 아파트이(가) 매물로 나왔습니다.
+이 아파트는 20평으로 2개의 방을 가지고 있습니다.
+가격은 17억만원 입니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">nmb_member</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;팀원은 총 몇명인가요?&#39;</span><span class="p">)</span>
+<span class="n">team_nm</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;팀명은 무엇인가요?&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&#39;&#39;저희 팀은 총 </span><span class="si">{</span><span class="n">nmb_member</span><span class="si">}</span><span class="s1">명으로 이루어진 </span><span class="si">{</span><span class="n">team_nm</span><span class="si">}</span><span class="s1">팀 입니다!&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>팀원은 총 몇명인가요?7
+팀명은 무엇인가요?네카라쿠배삼파망
+--------------------------------------------------
+저희 팀은 총 7명으로 이루어진 네카라쿠배삼파망팀 입니다!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#49457;&#51201;&#44228;&#49328;-&#54532;&#47196;&#44536;&#47016;"><strong>&#49457;&#51201;&#44228;&#49328; &#54532;&#47196;&#44536;&#47016;</strong><a class="anchor-link" href="#&#49457;&#51201;&#44228;&#49328;-&#54532;&#47196;&#44536;&#47016;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;이름을 입력하세요: &#39;</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;국어성적을 입력하세요: &#39;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;영어성적을 입력하세요: &#39;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;수학성적을 입력하세요: &#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;평균성적은 </span><span class="si">{</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="si">}</span><span class="s1">점입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#52964;&#54588;&#44032;&#44172;-&#47588;&#52636;-&#44228;&#49328;&#54616;&#44592;"><strong>&#52964;&#54588;&#44032;&#44172; &#47588;&#52636; &#44228;&#49328;&#54616;&#44592;</strong><a class="anchor-link" href="#&#52964;&#54588;&#44032;&#44172;-&#47588;&#52636;-&#44228;&#49328;&#54616;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">americano</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">latte</span> <span class="o">=</span> <span class="mi">3000</span>
+<span class="n">cappuccino</span> <span class="o">=</span> <span class="mi">3500</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;아메리카노 판매 갯수: &#39;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;카페라떼 판매 갯수: &#39;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;카푸치노 판매 갯수: &#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;총 매출은 </span><span class="si">{</span><span class="n">americano</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="n">latte</span><span class="o">*</span><span class="n">b</span> <span class="o">+</span> <span class="n">cappuccino</span><span class="o">*</span><span class="n">c</span><span class="si">}</span><span class="s1">원입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>아메리카노 판매 갯수: 2
+카페라떼 판매 갯수: 4
+카푸치노 판매 갯수: 6
+--------------------------------------------------
+총 매출은 37000원입니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">ame</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;아메리카노 판매 갯수: &#39;</span><span class="p">))</span>
+<span class="n">latte</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;카페라떼 판매 갯수: &#39;</span><span class="p">))</span>
+<span class="n">chino</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;카푸치노 판매 갯수: &#39;</span><span class="p">))</span>
+<span class="n">price</span> <span class="o">=</span> <span class="p">(</span><span class="n">ame</span><span class="o">*</span><span class="mi">2000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">latte</span><span class="o">*</span><span class="mi">3000</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">chino</span><span class="o">*</span><span class="mi">3500</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;총 매출은&#39;</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="s1">&#39;원입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>아메리카노 판매 갯수: 4
+카페라떼 판매 갯수: 7
+카푸치노 판매 갯수: 1
+--------------------------------------------------
+총 매출은 32500 원입니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47928;&#51088;&#47196;-&#51089;&#49457;"><strong>&#47928;&#51088;&#47196; &#51089;&#49457;</strong><a class="anchor-link" href="#&#47928;&#51088;&#47196;-&#51089;&#49457;"> </a></h1><p>\n =&gt; 줄넘김,enter <br />
+\t =&gt; 줄맞춤(intent),tap</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;셀 병합 </span><span class="se">\n</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> </span><span class="se">\&#39;</span><span class="s1">shift key</span><span class="se">\&#39;</span><span class="s1">를 누른 후 </span><span class="se">\n</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> </span><span class="se">\t</span><span class="s1"> 병합을 원하는 셀들을 다중선택 후 shift+m&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>셀 병합 
+ 	 &#39;shift key&#39;를 누른 후 
+ 	 	 병합을 원하는 셀들을 다중선택 후 shift+m
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#47928;&#51088;&#50676;&#47196;&#49436;&#51032;-&#49707;&#51088;&#52376;&#47532;"><strong>&#47928;&#51088;&#50676;&#47196;&#49436;&#51032; &#49707;&#51088;&#52376;&#47532;</strong><a class="anchor-link" href="#&#47928;&#51088;&#50676;&#47196;&#49436;&#51032;-&#49707;&#51088;&#52376;&#47532;"> </a></h1><p>주민번호, 우편번호등 값이 0으로 시작되는 정수
+파이썬에서는 정수가 0으로 시작하면 정수값 입력오류로 문법 오류 처리</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">210101</span><span class="o">-</span><span class="mi">1111111</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;210101-1111111&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="join&#44284;-split"><strong>join&#44284; split</strong><a class="anchor-link" href="#join&#44284;-split"> </a></h1><p>join: 문자열을 원하는 글자로 더한다.<br />
+split: 문자열을 원하는 글자로 나눈다.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welcome to Python&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>H-e-l-l-o- -W-o-r-l-d
+[&#39;Welcome&#39;, &#39;to&#39;, &#39;Python&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">==</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;apple&#39;</span> <span class="o">==</span> <span class="s1">&#39;APPLE&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">!=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False &lt;class &#39;bool&#39;&gt;
+False &lt;class &#39;bool&#39;&gt;
+True &lt;class &#39;bool&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/BabyEngineer-Unilog/2021/05/25/%EA%B8%B0%EB%B3%B8%EB%AC%B8%EB%B2%95%EA%B3%BC%EC%97%B0%EC%82%B0.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BabyEngineer-Unilog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BabyEngineer-Unilog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
