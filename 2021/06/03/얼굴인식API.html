@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | Uni’s Engineering Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/03/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.html" />
+<meta property="og:url" content="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/03/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.html" />
+<meta property="og:site_name" content="Uni’s Engineering Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-03T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/03/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/03/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.html"},"headline":"Title","dateModified":"2021-06-03T00:00:00-05:00","datePublished":"2021-06-03T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BabyEngineer-Unilog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://engineer-uni.github.io/BabyEngineer-Unilog/feed.xml" title="Uni's Engineering Blog" /><link rel="shortcut icon" type="image/x-icon" href="/BabyEngineer-Unilog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BabyEngineer-Unilog/">Uni&#39;s Engineering Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BabyEngineer-Unilog/about/">About Me</a><a class="page-link" href="/BabyEngineer-Unilog/search/">Search</a><a class="page-link" href="/BabyEngineer-Unilog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-03T00:00:00-05:00" itemprop="datePublished">
+        Jun 3, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Engineer-Uni/BabyEngineer-Unilog/tree/master/_notebooks/2021-06-03-얼굴인식API.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Engineer-Uni/BabyEngineer-Unilog/master?filepath=_notebooks%2F2021-06-03-%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Engineer-Uni/BabyEngineer-Unilog/blob/master/_notebooks/2021-06-03-얼굴인식API.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-06-03-얼굴인식API.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/Engineer-Uni/Engineer-Unilog/blob/master/_notebooks/2021-06-03-%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>팀과제] 우리 팀의 평균 나이는?</p>
+<p>네이버 오픈 API - <a href="https://developers.naver.com/docs/common/openapiguide/">https://developers.naver.com/docs/common/openapiguide/</a></p>
+<p>이미지캡쳐 예시 코드 - <a href="https://developers.naver.com/docs/utils/captcha/examples/#python">https://developers.naver.com/docs/utils/captcha/examples/#python</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mounted at /content/drive
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+
+<span class="c1"># 등록된 client_id, client_secret 정보를 입력합니다.</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="s2">&quot;yBwPM0bgoQTE7MzqhxmM&quot;</span>
+<span class="n">client_secret</span> <span class="o">=</span> <span class="s2">&quot;2HiUBFvSq_&quot;</span>
+
+<span class="c1"># 얼굴 사진을 통한 나이 추정을 위해서는 아래 url을 사용합니다. (face: 얼굴 분석, celebrity: 닮은 유명인 찾기)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://openapi.naver.com/v1/vision/face&quot;</span> 
+<span class="c1">#url = &quot;https://openapi.naver.com/v1/vision/celebrity&quot; </span>
+
+<span class="c1"># 분석할 이미지의 파일명을 입력합니다./</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/개인 서류/프로필.JPG&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)}</span>
+
+<span class="c1"># API 입력 설정</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;X-Naver-Client-Id&#39;</span><span class="p">:</span> <span class="n">client_id</span><span class="p">,</span> <span class="s1">&#39;X-Naver-Client-Secret&#39;</span><span class="p">:</span> <span class="n">client_secret</span> <span class="p">}</span>
+
+<span class="c1"># API 사용</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span>  <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">rescode</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">rescode</span><span class="o">==</span><span class="mi">200</span><span class="p">):</span>
+    <span class="c1"># 결과물 출력</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error Code:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rescode</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;info&#34;:{&#34;size&#34;:{&#34;width&#34;:1500,&#34;height&#34;:1997},&#34;faceCount&#34;:1},&#34;faces&#34;:[{&#34;roi&#34;:{&#34;x&#34;:502,&#34;y&#34;:698,&#34;width&#34;:352,&#34;height&#34;:352},&#34;landmark&#34;:{&#34;leftEye&#34;:{&#34;x&#34;:573,&#34;y&#34;:811},&#34;rightEye&#34;:{&#34;x&#34;:736,&#34;y&#34;:767},&#34;nose&#34;:{&#34;x&#34;:670,&#34;y&#34;:870},&#34;leftMouth&#34;:{&#34;x&#34;:614,&#34;y&#34;:953},&#34;rightMouth&#34;:{&#34;x&#34;:786,&#34;y&#34;:904}},&#34;gender&#34;:{&#34;value&#34;:&#34;female&#34;,&#34;confidence&#34;:0.999995},&#34;age&#34;:{&#34;value&#34;:&#34;16~20&#34;,&#34;confidence&#34;:0.534938},&#34;emotion&#34;:{&#34;value&#34;:&#34;laugh&#34;,&#34;confidence&#34;:0.885847},&#34;pose&#34;:{&#34;value&#34;:&#34;frontal_face&#34;,&#34;confidence&#34;:0.984797}}]}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># loads 함수를 사용하여 json으로 변환합니다.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;faces&#39;: [{&#39;age&#39;: {&#39;confidence&#39;: 0.534938, &#39;value&#39;: &#39;16~20&#39;},
+   &#39;emotion&#39;: {&#39;confidence&#39;: 0.885847, &#39;value&#39;: &#39;laugh&#39;},
+   &#39;gender&#39;: {&#39;confidence&#39;: 0.999995, &#39;value&#39;: &#39;female&#39;},
+   &#39;landmark&#39;: {&#39;leftEye&#39;: {&#39;x&#39;: 573, &#39;y&#39;: 811},
+    &#39;leftMouth&#39;: {&#39;x&#39;: 614, &#39;y&#39;: 953},
+    &#39;nose&#39;: {&#39;x&#39;: 670, &#39;y&#39;: 870},
+    &#39;rightEye&#39;: {&#39;x&#39;: 736, &#39;y&#39;: 767},
+    &#39;rightMouth&#39;: {&#39;x&#39;: 786, &#39;y&#39;: 904}},
+   &#39;pose&#39;: {&#39;confidence&#39;: 0.984797, &#39;value&#39;: &#39;frontal_face&#39;},
+   &#39;roi&#39;: {&#39;height&#39;: 352, &#39;width&#39;: 352, &#39;x&#39;: 502, &#39;y&#39;: 698}}],
+ &#39;info&#39;: {&#39;faceCount&#39;: 1, &#39;size&#39;: {&#39;height&#39;: 1997, &#39;width&#39;: 1500}}}</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">face_list</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;faces&#39;</span><span class="p">)</span>
+<span class="n">face</span> <span class="o">=</span> <span class="n">face_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">age_info</span> <span class="o">=</span> <span class="n">face</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">age_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;얼굴 인식 나이는 </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1">세 입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>얼굴 인식 나이는 16~20세 입니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">[</span><span class="s1">&#39;face&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;age&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;얼굴 인식 나이는 </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1">세 입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">add_pic</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;이미지 파일링크를 첨부하세요: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">add_pic</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">files</span><span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">add_pic</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>이미지 파일링크를 첨부하세요: /content/drive/MyDrive/개인 서류/프로필.JPG
+이미지 파일링크를 첨부하세요: 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">team_results</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.534938</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;16~20&#39;</span><span class="p">}},</span>
+    <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.950639</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;18~22&#39;</span><span class="p">}},</span>
+    <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.319881</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;21~25&#39;</span><span class="p">}},</span>
+    <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.0696897</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;25~29&#39;</span><span class="p">}},</span>
+    <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.449355</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;28~32&#39;</span><span class="p">}}</span>
+<span class="p">]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">avg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">team_results</span><span class="p">)):</span>
+    <span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">team_results</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;age&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
+    <span class="n">avg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="n">ages</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">))))</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">team_avg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;평균나이 : </span><span class="si">{</span><span class="n">team_avg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>평균나이 : 23.6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">team_results</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.534938</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;16~20&#39;</span><span class="p">}},</span>
+                <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.950639</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;18~22&#39;</span><span class="p">}},</span>
+                <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.319881</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;21~25&#39;</span><span class="p">}},</span>
+                <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.0696897</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;25~29&#39;</span><span class="p">}},</span>
+                <span class="p">{</span><span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;confidence&#39;</span><span class="p">:</span> <span class="mf">0.449355</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;28~32&#39;</span><span class="p">}}]</span>
+<span class="c1"># 각 age 다 dict로 만들기</span>
+
+<span class="n">ages</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#dict에서 추출해올 나이값</span>
+<span class="n">avg</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#각자 나이의 평균</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">team_results</span><span class="p">:</span>
+    <span class="c1">#i = {&#39;age&#39;: {&#39;confidence&#39;: 0.534938, &#39;value&#39;: &#39;16~20&#39;}}</span>
+    <span class="n">ages</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="c1"># 각 팀원의 추정 나이 가져오기</span>
+    <span class="n">avg</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">ages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="nb">int</span><span class="p">(</span><span class="n">ages</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">team_avg</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span> <span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;평균나이 : </span><span class="si">{</span><span class="n">team_avg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>평균나이 : 23.6
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/BabyEngineer-Unilog/2021/06/03/%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9DAPI.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BabyEngineer-Unilog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BabyEngineer-Unilog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
