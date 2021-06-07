@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>논리 연산자(Logical operator) | Uni’s Engineering Blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="논리 연산자(Logical operator)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/01/if-else%EB%AC%B8%EA%B3%BC-%EC%A7%91%ED%95%A9set.html" />
+<meta property="og:url" content="https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/01/if-else%EB%AC%B8%EA%B3%BC-%EC%A7%91%ED%95%A9set.html" />
+<meta property="og:site_name" content="Uni’s Engineering Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"An easy to use blogging platform with support for Jupyter Notebooks.","url":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/01/if-else%EB%AC%B8%EA%B3%BC-%EC%A7%91%ED%95%A9set.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://engineer-uni.github.io/BabyEngineer-Unilog/2021/06/01/if-else%EB%AC%B8%EA%B3%BC-%EC%A7%91%ED%95%A9set.html"},"headline":"논리 연산자(Logical operator)","dateModified":"2021-06-01T00:00:00-05:00","datePublished":"2021-06-01T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BabyEngineer-Unilog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://engineer-uni.github.io/BabyEngineer-Unilog/feed.xml" title="Uni's Engineering Blog" /><link rel="shortcut icon" type="image/x-icon" href="/BabyEngineer-Unilog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BabyEngineer-Unilog/">Uni&#39;s Engineering Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BabyEngineer-Unilog/about/">About Me</a><a class="page-link" href="/BabyEngineer-Unilog/search/">Search</a><a class="page-link" href="/BabyEngineer-Unilog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">논리 연산자(Logical operator)</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-06-01T00:00:00-05:00" itemprop="datePublished">
+        Jun 1, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/Engineer-Uni/BabyEngineer-Unilog/tree/master/_notebooks/2021-06-01-if--else문과 집합set.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Engineer-Uni/BabyEngineer-Unilog/master?filepath=_notebooks%2F2021-06-01-if--else%EB%AC%B8%EA%B3%BC+%EC%A7%91%ED%95%A9set.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Engineer-Uni/BabyEngineer-Unilog/blob/master/_notebooks/2021-06-01-if--else문과 집합set.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BabyEngineer-Unilog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-06-01-if--else문과 집합set.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/Engineer-Uni/Engineer-Unilog/blob/master/_notebooks/2021-06-01-if--else%EB%AC%B8%EA%B3%BC%20%EC%A7%91%ED%95%A9set.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#50696;&#51228;)-&#54200;&#51032;&#51216;-&#51116;&#44256;&#44288;&#47532;"><strong>&#50696;&#51228;) &#54200;&#51032;&#51216; &#51116;&#44256;&#44288;&#47532;</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#54200;&#51032;&#51216;-&#51116;&#44256;&#44288;&#47532;"> </a></h2><ol>
+<li>사용자로부터 물건 이름과 갯수 입력 받기 (엔터를 입력할 때까지 반복)</li>
+<li>물건이 존재하지 않으면 추가하고, 존재하면 물건 개수를 더한다</li>
+<li>입력이 끝나면 재고 현황을 물건이름의 오름차순으로 정렬하여 출력</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">stock</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;수박&#39;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">&#39;딸기&#39;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s1">&#39;바나나&#39;</span> <span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+<span class="c1">#물건: goods / 수량: number</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">goods</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;물건 이름:&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">goods</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;수량:&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">goods</span> <span class="ow">in</span> <span class="n">stock</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">stock</span><span class="p">[</span><span class="n">goods</span><span class="p">]</span> <span class="o">+=</span> <span class="n">number</span> <span class="c1">#물건 개수 더하기</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">stock</span><span class="p">[</span><span class="n">goods</span><span class="p">]</span> <span class="o">=</span> <span class="n">number</span> <span class="c1">#없으면 요소 추가하기</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="c1">#오름차순 정렬</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">stock</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>물건 이름:바나나
+수량:3
+물건 이름:
+--------------------------------------------------
+딸기 3 바나나 4 수박 3 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51665;&#54633;(set)"><strong>&#51665;&#54633;(set)</strong><a class="anchor-link" href="#&#51665;&#54633;(set)"> </a></h1><ul>
+<li>자료들이 순서와 중복 없이 저장된 것</li>
+<li>중괄호{} 안에 요소를 쉼표로 구분하여 나열한다.</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+<span class="n">set_wish</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">])</span> <span class="c1">#set() 명령어는 집합을 만든다</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;, &#39;암스테르담&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51665;&#54633;-&gt;-&#50836;&#49548;&#52628;&#52636;"><strong>&#51665;&#54633; &gt; &#50836;&#49548;&#52628;&#52636;</strong><a class="anchor-link" href="#&#51665;&#54633;-&gt;-&#50836;&#49548;&#52628;&#52636;"> </a></h1><ul>
+<li>인덱싱으로 값을 얻을 수 없다 (집합 자료형은 순서가 없기 때문!)</li>
+<li>인덱싱 값 사용하려면 리스트나 튜플로 변환</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+<span class="n">wish_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span> <span class="c1">#리스트로 변환하기</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wish_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wish_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;, &#39;암스테르담&#39;]
+모로코
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+<span class="n">wish_list</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span> <span class="c1">#튜플로 변환하기</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wish_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wish_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;, &#39;암스테르담&#39;)
+모로코
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51665;&#54633;(set)-&gt;-&#50672;&#49328;"><strong>&#51665;&#54633;(set) &gt; &#50672;&#49328;</strong><a class="anchor-link" href="#&#51665;&#54633;(set)-&gt;-&#50672;&#49328;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">sweety</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;빼빼로&#39;</span><span class="p">,</span><span class="s1">&#39;칸초&#39;</span><span class="p">,</span><span class="s1">&#39;허니버터&#39;</span><span class="p">}</span>
+<span class="n">salty</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;허니버터&#39;</span><span class="p">,</span><span class="s1">&#39;포카칩&#39;</span><span class="p">,</span><span class="s1">&#39;새우깡&#39;</span><span class="p">}</span>
+
+<span class="c1">#합집합</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sweety</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">salty</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sweety</span><span class="o">|</span><span class="n">salty</span><span class="p">)</span>
+
+<span class="c1">#교집합</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sweety</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">salty</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sweety</span><span class="o">&amp;</span><span class="n">salty</span><span class="p">)</span>
+
+<span class="c1"># 차집합</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sweety</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">salty</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sweety</span><span class="o">-</span><span class="n">salty</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">salty</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">sweety</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">salty</span><span class="o">-</span><span class="n">sweety</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51665;&#54633;(set)-&gt;-&#50836;&#49548;&#52628;&#44032;"><strong>&#51665;&#54633;(set) &gt; &#50836;&#49548;&#52628;&#44032;</strong><a class="anchor-link" href="#&#51665;&#54633;(set)-&gt;-&#50836;&#49548;&#52628;&#44032;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+<span class="n">set_wish</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;베를린&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;, &#39;암스테르담&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+<span class="n">set_wish</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;, &#39;암스테르담&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51665;&#54633;(set)-&gt;-&#50836;&#49548;-&#49325;&#51228;"><strong>&#51665;&#54633;(set) &gt; &#50836;&#49548; &#49325;&#51228;</strong><a class="anchor-link" href="#&#51665;&#54633;(set)-&gt;-&#50836;&#49548;-&#49325;&#51228;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+
+<span class="n">set_wish</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">)</span> 
+<span class="c1">#암스테르담 삭제하기</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">set_wish</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;베를린&#39;</span><span class="p">,</span><span class="s1">&#39;암스테르담&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">,</span><span class="s1">&#39;모로코&#39;</span><span class="p">,</span><span class="s1">&#39;포르투&#39;</span><span class="p">,</span><span class="s1">&#39;다합&#39;</span><span class="p">}</span>
+
+<span class="c1"># set_wish.remove(&#39;바르셀로나&#39;) </span>
+
+<span class="k">if</span> <span class="s1">&#39;바르셀로나&#39;</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">set_wish</span><span class="p">):</span>
+    <span class="n">set_wish</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;바르셀로나&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">set_wish</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;베를린&#39;, &#39;포르투&#39;, &#39;모로코&#39;, &#39;다합&#39;, &#39;암스테르담&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50724;&#47448;&#47700;&#49464;&#51648;-&#54644;&#49437;"><strong>&#50724;&#47448;&#47700;&#49464;&#51648; &#54644;&#49437;</strong><a class="anchor-link" href="#&#50724;&#47448;&#47700;&#49464;&#51648;-&#54644;&#49437;"> </a></h1><ul>
+<li><p>NameError : 참조변수 없음 (변수가 정의되어있지 않음)</p>
+</li>
+<li><p>SyntaxError : 문법이 잘못되었음 (오타, 괄호를 제대로 닫지 않았을 때, 콜론(:)을 잘못 사용했을 때 등...)</p>
+</li>
+<li><p>TypeError : 문자열 타입이 맞지 않음</p>
+</li>
+<li><p>ZeroDivisionError : 0으로 나눌 수 없음</p>
+</li>
+<li><p>IndentationError : 0으로 나눌 수 없음</p>
+</li>
+<li><p>KeyError : 리스트, 튜플, 딕셔너리, 집합 등에서 해당 요소 없음</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#54532;&#47196;&#44536;&#47016;&#51032;-3&#44032;&#51648;-&#44592;&#48376;-&#51228;&#50612;-&#44396;&#51312;"><strong>&#54532;&#47196;&#44536;&#47016;&#51032; 3&#44032;&#51648; &#44592;&#48376; &#51228;&#50612; &#44396;&#51312;</strong><a class="anchor-link" href="#&#54532;&#47196;&#44536;&#47016;&#51032;-3&#44032;&#51648;-&#44592;&#48376;-&#51228;&#50612;-&#44396;&#51312;"> </a></h1><ul>
+<li>순차구조</li>
+<li>선택구조 : 조건에 따라 명령을 선택하여 실행하는 구조 
+<br />Ex) if문</li>
+<li>반복구조 : 동일한 명령이 반복되면서 실행되는 구조 
+<br />Ex) for문(범위) / while문(해당조건 충족)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#51312;&#44148;&#47928;(if&#47928;)&#51032;-&#44396;&#51312;&#46308;"><strong>&#51312;&#44148;&#47928;(if&#47928;)&#51032; &#44396;&#51312;&#46308;</strong><a class="anchor-link" href="#&#51312;&#44148;&#47928;(if&#47928;)&#51032;-&#44396;&#51312;&#46308;"> </a></h1><ul>
+<li>if</li>
+<li>if ~ else</li>
+<li>if ~ elif</li>
+<li>if elif ~ else</li>
+<li>중첩 if</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#53076;&#46300;&#48660;&#47085;"><strong>&#53076;&#46300;&#48660;&#47085;</strong><a class="anchor-link" href="#&#53076;&#46300;&#48660;&#47085;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a는 0보다 작다.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a는 음수이다.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;끝&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>끝
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a는 0보다 작다.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a는 음수이다.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;끝&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a는 음수이다.
+끝
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#53076;&#47196;&#45208;-&#51088;&#44032;&#51652;&#45800;-&#54532;&#47196;&#44536;&#47016;-1&#45800;&#44228;"><strong>&#53076;&#47196;&#45208; &#51088;&#44032;&#51652;&#45800; &#54532;&#47196;&#44536;&#47016; 1&#45800;&#44228;</strong><a class="anchor-link" href="#&#53076;&#47196;&#45208;-&#51088;&#44032;&#51652;&#45800;-&#54532;&#47196;&#44536;&#47016;-1&#45800;&#44228;"> </a></h1><ol>
+<li>체온을 입력받아 </li>
+<li>체온이 37.5도 초과면 </li>
+<li>'등교 불가'를 출력하는 프로그램을 작성하세요</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;체온:&#39;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">37.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;등교 불가&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>체온:36.5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#53076;&#47196;&#45208;-&#51088;&#44032;&#51652;&#45800;-&#54532;&#47196;&#44536;&#47016;-2&#45800;&#44228;"><strong>&#53076;&#47196;&#45208; &#51088;&#44032;&#51652;&#45800; &#54532;&#47196;&#44536;&#47016; 2&#45800;&#44228;</strong><a class="anchor-link" href="#&#53076;&#47196;&#45208;-&#51088;&#44032;&#51652;&#45800;-&#54532;&#47196;&#44536;&#47016;-2&#45800;&#44228;"> </a></h1><ol>
+<li>체온, 검사결과대기여부, 자가격리여부를 입력받아 </li>
+<li>체온이 37.5도 초과면  '발열기준 초과: 등교불가'를 출력합니다.</li>
+<li>아니고, 만약 검사대기여부가 'Y'면 '검사대기 중 등교 불가'를 출력</li>
+<li>아니고, 만약 자가격리여부가 'Y'면 '자가격리 중 등교 불가'를 출력</li>
+<li>모든 조건이 만족하지 않는다면 '등교가능'을 출력합니다.</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;체온:&#39;</span><span class="p">))</span>
+<span class="n">waiting</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;검사결과대기여부(Y/N):&#39;</span><span class="p">)</span>
+<span class="n">isolation</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;자가격리여부(Y/N):&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mf">37.5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;발열기준 초과: 등교불가&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">waiting</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;검사대기 중 등교 불가&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">isolation</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;자가격리 중 등교 불가&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;등교 가능&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>체온:37
+검사결과대기여부(Y/N):Y
+자가격리여부(Y/N):N
+검사대기 중 등교 불가
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#54617;&#51216;-&#52636;&#47141;&#44592;"><strong>&#50696;&#51228;) &#54617;&#51216; &#52636;&#47141;&#44592;</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#54617;&#51216;-&#52636;&#47141;&#44592;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">grade</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+<span class="n">score</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;점수를 입력하세요:&#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;등급: </span><span class="si">{</span><span class="n">grade</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>점수를 입력하세요:88
+B
+등급:  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#44552;&#50529;&#50640;-&#46384;&#47480;-&#54624;&#51064;&#50984;-&#44228;&#49328;&#44592;"><strong>&#50696;&#51228;) &#44552;&#50529;&#50640; &#46384;&#47480; &#54624;&#51064;&#50984; &#44228;&#49328;&#44592;</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#44552;&#50529;&#50640;-&#46384;&#47480;-&#54624;&#51064;&#50984;-&#44228;&#49328;&#44592;"> </a></h1><ol>
+<li>물건 구매가를 입력받고,</li>
+<li>금액에 따른 할인율을 계산하여</li>
+<li>구매가, 할인율, 할인금액, 지불금액을 출력</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">buy</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;구매가:&#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">buy</span> <span class="o">&gt;=</span> <span class="mi">100000</span><span class="p">:</span> <span class="c1">#가장 범위가 작은 조건부터 써준다</span>
+    <span class="n">dc_percent</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">elif</span> <span class="n">buy</span> <span class="o">&gt;=</span> <span class="mi">50000</span><span class="p">:</span>
+    <span class="n">dc_percent</span> <span class="o">=</span> <span class="mf">7.5</span>
+<span class="k">elif</span> <span class="n">buy</span> <span class="o">&gt;=</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="n">dc_percent</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">dc_percent</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">dc_price</span> <span class="o">=</span> <span class="n">buy</span><span class="o">*</span><span class="p">(</span><span class="n">dc_percent</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;구매가: </span><span class="si">{</span><span class="n">buy</span><span class="si">}</span><span class="s1">원&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;할인율: </span><span class="si">{</span><span class="n">dc_percent</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;할인금액: </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">dc_price</span><span class="p">)</span><span class="si">}</span><span class="s1">원&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;지불금액: </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">buy</span><span class="o">-</span><span class="n">dc_price</span><span class="p">)</span><span class="si">}</span><span class="s1">원&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>구매가:360000
+--------------------------------------------------
+구매가: 360000원
+할인율: 10%
+할인금액: 18000원
+지불금액: 342000원
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#52572;&#49548;&#44050;-&#44396;&#54616;&#44592;(1/3)"><strong>&#50696;&#51228;) &#52572;&#49548;&#44050; &#44396;&#54616;&#44592;(1/3)</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#52572;&#49548;&#44050;-&#44396;&#54616;&#44592;(1/3)"> </a></h1><ol>
+<li>3개의 수를 입력받아</li>
+<li>가장 작은 수를 출력하세요</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">numbers</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">numbers</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;숫자를 입력하세요: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">min_1</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#첫번째 수를 임의로 저장</span>
+<span class="k">if</span> <span class="n">min_1</span> <span class="o">&gt;</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">min_1</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">min_1</span> <span class="o">&gt;</span> <span class="n">number</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="n">min_1</span> <span class="o">=</span> <span class="n">number</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">min_1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>숫자를 입력하세요: 25
+숫자를 입력하세요: 26
+숫자를 입력하세요: 27
+--------------------------------------------------
+2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;숫자를 입력하세요: &#39;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">min_n</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;가장 작은수:&#39;</span><span class="p">,</span><span class="n">min_n</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>숫자를 입력하세요: 2
+숫자를 입력하세요: 3
+숫자를 입력하세요: 1
+--------------------------------------------------
+가장 작은수: 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#45436;&#47532;&#50672;&#49328;&#51088;"><strong>&#45436;&#47532;&#50672;&#49328;&#51088;</strong><a class="anchor-link" href="#&#45436;&#47532;&#50672;&#49328;&#51088;"> </a></h1><ul>
+<li>논리연산자를 사용하여 여러 개의 조건을 조합하여 복잡한 조건식을 만들 수 있다.</li>
+</ul>
+<ol>
+<li>a and b</li>
+<li>a or b</li>
+<li>not a, not b</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#45436;&#47532;-&#50672;&#49328;&#51088;"><strong>&#45436;&#47532; &#50672;&#49328;&#51088;</strong><a class="anchor-link" href="#&#45436;&#47532;-&#50672;&#49328;&#51088;"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="s1">&#39;j&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#44397;&#47549;&#44277;&#50896;-&#51077;&#51109;&#47308;-&#44228;&#49328;&#44592;"><strong>&#50696;&#51228;) &#44397;&#47549;&#44277;&#50896; &#51077;&#51109;&#47308; &#44228;&#49328;&#44592;</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#44397;&#47549;&#44277;&#50896;-&#51077;&#51109;&#47308;-&#44228;&#49328;&#44592;"> </a></h1><ol>
+<li>나이를 입력받아 국립공원 입장권 발급하기</li>
+<li>입장료는 3000</li>
+<li>나이가 65세 이상이거나 7세 이하인 경우에는 무료</li>
+<li>나이 8~ 18세는 청소년 요금이 1000원</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;나이: &#39;</span><span class="p">))</span>
+<span class="n">price</span> <span class="o">=</span> <span class="mi">3000</span>
+
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">65</span> <span class="ow">or</span> <span class="n">age</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="p">:</span> <span class="c1"># 3번 조건</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="s1">&#39;무료&#39;</span>
+<span class="k">elif</span> <span class="mi">7</span> <span class="o">&lt;</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">19</span><span class="p">:</span> <span class="c1"># 4번 조건</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;입장료는 </span><span class="si">{</span><span class="n">price</span><span class="si">}</span><span class="s1">입니다.&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>나이: 16
+--------------------------------------------------
+입장료는 1000입니다.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#47196;&#44536;&#51064;-&#54532;&#47196;&#44536;&#47016;(1/2)"><strong>&#50696;&#51228;) &#47196;&#44536;&#51064; &#54532;&#47196;&#44536;&#47016;(1/2)</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#47196;&#44536;&#51064;-&#54532;&#47196;&#44536;&#47016;(1/2)"> </a></h1><ol>
+<li>사용자로부터 아이디/패스워드를 받아서</li>
+<li>프로그램에 저장된 아이디/패스워드와 일치하는지 여부 검사하여</li>
+<li>로그인/로그인 실패를 출력하는 프로그램</li>
+</ol>
+<ul>
+<li>아이디:ID1234</li>
+<li>패스워드:PWD1234</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">id</span> <span class="o">=</span> <span class="s1">&#39;ID1234&#39;</span>
+<span class="n">pw</span> <span class="o">=</span> <span class="s1">&#39;PWD1234&#39;</span>
+
+<span class="n">given_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;아이디: &#39;</span><span class="p">)</span>
+<span class="n">given_pw</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;비밀번호: &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">given_id</span> <span class="o">==</span> <span class="nb">id</span> <span class="ow">and</span> <span class="n">given_pw</span> <span class="o">==</span> <span class="n">pw</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;로그인 성공&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;로그인 실패&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>아이디: ID1234
+비밀번호: PWD1234
+로그인 성공
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="nb">id</span> <span class="o">=</span> <span class="s1">&#39;ID1234&#39;</span>
+<span class="n">pw</span> <span class="o">=</span> <span class="s1">&#39;PWD1234&#39;</span>
+
+<span class="n">given_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;아이디: &#39;</span><span class="p">)</span>
+<span class="n">given_pw</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;비밀번호: &#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">given_id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;아이디를 확인해주세요&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="ow">not</span> <span class="n">given_pw</span> <span class="o">==</span> <span class="n">pw</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;패스워드를 확인해주세요&#39;</span><span class="p">)</span>  
+<span class="k">elif</span> <span class="n">given_id</span> <span class="o">==</span> <span class="nb">id</span> <span class="ow">and</span> <span class="n">given_pw</span> <span class="o">==</span> <span class="n">pw</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;로그인 성공&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>아이디: ID1234
+비밀번호: PWD123
+패스워드를 확인해주세요
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#49324;&#52825;&#50672;&#49328;-&#54532;&#47196;&#44536;&#47016;"><strong>&#49324;&#52825;&#50672;&#49328; &#54532;&#47196;&#44536;&#47016;</strong><a class="anchor-link" href="#&#49324;&#52825;&#50672;&#49328;-&#54532;&#47196;&#44536;&#47016;"> </a></h1><p>두 수와 사칙연산기호를 입력받아 연산 기호에 따라 연산 결과를 출력</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">cal</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">cal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;숫자를 입력하세요: &#39;</span><span class="p">)))</span>
+
+<span class="n">sign</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;연산을 입력하세요: &#39;</span><span class="p">)</span>
+<span class="n">answer</span> <span class="o">=</span> <span class="nb">float</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">cal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">cal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">cal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">cal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+    <span class="n">answer</span> <span class="o">=</span> <span class="n">cal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">cal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">cal</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="n">cal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">cal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0으로 나눌 수 없습니다.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">cal</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}{</span><span class="n">sign</span><span class="si">}{</span><span class="n">cal</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>숫자를 입력하세요: 2
+숫자를 입력하세요: 2
+연산을 입력하세요: -
+--------------------------------------------------
+2-2 = 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#50696;&#51228;)-&#51452;&#49324;&#50948;-&#45912;&#51648;&#44592;-&#44172;&#51076;"><strong>&#50696;&#51228;) &#51452;&#49324;&#50948; &#45912;&#51648;&#44592; &#44172;&#51076;</strong><a class="anchor-link" href="#&#50696;&#51228;)-&#51452;&#49324;&#50948;-&#45912;&#51648;&#44592;-&#44172;&#51076;"> </a></h1><p>두개의 주사위를 던져 더 큰 수가 나오는 사람이 이기는 게임</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">dice_1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">dice_2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">dice_1</span> <span class="o">&gt;</span> <span class="n">dice_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">dice_1</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">dice_2</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">의 결과로 첫번째 주사위가 이겼습니다&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dice_1</span> <span class="o">==</span> <span class="n">dice_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">dice_1</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">dice_2</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">의 결과로 비겼습니다&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">dice_1</span> <span class="o">&lt;</span> <span class="n">dice_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">dice_1</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">dice_2</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">의 결과로 두번째 주사위가 이겼습니다&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2:5의 결과로 두번째 주사위가 이겼습니다
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/BabyEngineer-Unilog/2021/06/01/if-else%EB%AC%B8%EA%B3%BC-%EC%A7%91%ED%95%A9set.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BabyEngineer-Unilog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BabyEngineer-Unilog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BabyEngineer-Unilog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
